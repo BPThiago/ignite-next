@@ -19,8 +19,8 @@ const Home: NextPage = () => {
         <div className='top-0 absolute w-full flex justify-center'>
           <ReactIcon/>
         </div>
-        <div className="w-full max-w-[1100px] flex items-center flex-wrap sm:flex-nowrap justify-center sm:justify-between mt-20 px-2 gap-10 sm:gap-2 mx-auto z-[1]">
-          <div className="max-w-[640px]">
+        <div className="w-full max-w-[1100px] flex items-center flex-wrap md:flex-nowrap justify-center md:justify-between mt-20 sm:px-2 gap-10 md:gap-2 mx-auto z-[1]">
+          <div className="max-w-[640px] px-2 md:px-0">
               <IgniteLogo/>
               <h1 className="mt-8 text-[2.5rem] leading-tight">
                   Construa uma <strong className="text-blue-500">aplicação completa</strong>, do zero, com <strong className="text-blue-500">React JS</strong>
@@ -29,13 +29,13 @@ const Home: NextPage = () => {
               Em apenas uma semana você vai dominar na prática uma das tecnologias mais utilizadas e com alta demanda para acessar as melhores oportunidades do mercado.
               </p>
           </div>
-          <div className="py-8 px-10 bg-gray-700 border border-gray-500 rounded min-w-[15rem] max-w-[20rem] flex-1">
+          <div className="py-8 px-10 bg-gray-700 border-y sm:border border-gray-500 md:rounded md:min-w-[15rem] md:max-w-[20rem] flex-1">
               { session ?
               <>
               <strong className="text-2xl mb-6 block">Entrou como:</strong>
               <div className='flex flex-row items-center gap-3'>
                 { session.user?.image &&
-                <div className="w-[4rem] h-[4rem] rounded-full border-2 border-gray-300 relative overflow-hidden">
+                <div className="min-w-[4rem] min-h-[4rem] rounded-full border-2 border-gray-300 relative overflow-hidden">
                   <Image src={session.user?.image} layout="fill"/>
                 </div>
                 }
