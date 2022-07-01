@@ -7,6 +7,7 @@ import { initializeApolloSSR } from "../../../lib/apollo";
 import { isFuture } from 'date-fns'
 import { useContext } from "react";
 import { ShowLessonListContext } from "../../../context/showLessonList";
+import Head from "next/head";
 
 const GET_LESSON_BY_SLUG_QUERY = gql`
     query ($slug: String) {
@@ -101,18 +102,25 @@ export async function getServerSideProps(context: any) {
 export default function Lesson({slug, lesson}:{slug: string, lesson: GetLessonBySlugResponse}) {
     const {showLessonList} = useContext(ShowLessonListContext)
     return (
-        <div className="flex flex-col min-h-screen">
-            <Header/>
-            <main className="flex flex-1 relative">
-                {slug ? <Video lesson={lesson}/> : <div className={"flex-1 dark:bg-gray-900 dark:text-gray-100"}/>}
-                <aside className="hidden lg:block w-[348px] bg-gray-500 dark:bg-gray-700 p-6 border-l border-l-gray-400 dark:border-l-gray-600 text-gray-100">
-                    <LessonList activeLesson={slug}/>
-                </aside>
+        <>
+            <Head>
+                <title>
+                    Ignite Lab | {lesson.title}
+                </title>
+            </Head>
+            <div className="flex flex-col min-h-screen">
+                <Header/>
+                <main className="flex flex-1 relative">
+                    {slug ? <Video lesson={lesson}/> : <div className={"flex-1 dark:bg-gray-900 dark:text-gray-100"}/>}
+                    <aside className="hidden lg:block w-[348px] bg-gray-500 dark:bg-gray-700 p-6 border-l border-l-gray-400 dark:border-l-gray-600 text-gray-100">
+                        <LessonList activeLesson={slug}/>
+                    </aside>
 
-                <div className={`${showLessonList ? 'block' : 'hidden'} w-full h-full lg:hidden bg-gray-500 dark:bg-gray-700 p-6 text-gray-100 absolute z-1`}>
-                    <LessonList activeLesson={slug}/>
-                </div>
-            </main>
-        </div>
+                    <div className={`${showLessonList ? 'block' : 'hidden'} w-full h-full lg:hidden bg-gray-500 dark:bg-gray-700 p-6 text-gray-100 absolute z-1`}>
+                        <LessonList activeLesson={slug}/>
+                    </div>
+                </main>
+            </div>
+        </>
     )
 }

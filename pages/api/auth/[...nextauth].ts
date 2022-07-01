@@ -13,7 +13,7 @@ export const authOptions: NextAuthOptions = {
             clientSecret: process.env.GOOGLE_SECRET || "",
         }),
     ],
-    secret: process.env.GOOGLE_SECRET,
+    secret: process.env.NEXTAUTH_SECRET,
 }
 
 export default NextAuth(authOptions)
