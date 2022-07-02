@@ -5,7 +5,7 @@ export default function Page404() {
         <div className="bg-gray-700 text-gray-100">
             <div className="mx-auto grid grid-cols-1 md:grid-cols-2 min-h-screen items-center p-4 gap-5 max-w-[1100px]">
                 <div className="flex flex-col items-center text-5xl md:text-6xl uppercase font-extrabold gap-5">
-                    <span>Don't panic!</span>
+                    <span>Don&apos;t panic!</span>
                     <div className="relative md:w-[12rem] md:h-[18rem]">
                         <Image src="/images/marvin.png" layout="fill" className="-scale-x-100"/>
                     </div>
