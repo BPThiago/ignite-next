@@ -1,34 +1,59 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Ignite Lab :rocket:
 
-## Getting Started
+Aplicação desenvolvida e remodelada com base na série de aulas do Ignite Lab da [**RocketSeat**](https://github.com/rocketseat).
+> Os vídeos usados como aula no site são do canal [**Fireship**](https://www.youtube.com/c/Fireship).
 
-First, run the development server:
+## :wrench: Ferramentas utilizadas
 
-```bash
-npm run dev
-# or
-yarn dev
+* React
+* Next JS
+* TypeScript
+* Tailwind CSS
+* React Player
+* Apollo JS
+* GraphQL
+* GraphCMS
+
+## :camera: Screenshots
+
+* ### Desktop :computer:
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/75534648/177230005-ed84049b-4fb0-4711-9aae-d02ca90d3b5f.png" width="49%"/>
+  <img src="https://user-images.githubusercontent.com/75534648/177229637-cfa1ad95-3b84-45ba-9034-c5206940dd65.png" width="49%"/>
+  <img src="https://user-images.githubusercontent.com/75534648/177231100-8ccc8db2-cc58-427a-b3c9-f463fd0fbb92.png" width="49%"/>
+  <img src="https://user-images.githubusercontent.com/75534648/177231144-b0a1ff0f-2d9f-4b32-98fb-7afb7e2a0c7c.png" width="49%"/>
+
+* ### Mobile :iphone:
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/75534648/177232110-45fe5725-0af0-4cd5-aaa9-1d71ff6e88b6.png" height="500"/>
+  <img src="https://user-images.githubusercontent.com/75534648/177232397-4b1e54bd-500d-4aef-964c-6689e8c5c725.png" height="500"/>
+  <img src="https://user-images.githubusercontent.com/75534648/177232853-eb05edb8-28f1-489e-8475-e302f5ec64fc.png" height="500"/>
+  <img src="https://user-images.githubusercontent.com/75534648/177233094-98bd18b2-37d8-448d-befd-642c772aefec.png" height="500"/>
+
+## :gear: Como executar?
+
+```shell
+  git clone https://github.com/BPThiago/ignite-next.git
+  
+  # Abra o diretório recém criado
+  cd ignite-next
+  
+  # Instale as dependências utilizando "yarn" ou "npm install"
+  yarn
+  
+  # Execute o script usando "yarn dev" ou "npm run dev"
+  yarn dev
+  
+  #Obs: Para um funcionamento adequado, será necessário adicionar variáveis de ambiente.
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## :white_check_mark: TO-DO
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+* [x] Autenticação com GitHub
+* [x] Autenticação com Google
+* [x] Uso do Next Auth
+* [x] Uso do React Player no lugar do Vime JS por melhor compatibilidade com a versão 18.2.0 do React
+* [x] Responsividade
+* [ ] Alterar aparência do scroll
