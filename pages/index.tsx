@@ -7,10 +7,11 @@ import Link from 'next/link';
 import ReactIcon from '../components/svg/ReactIcon';
 import Footer from '../components/Footer';
 import Head from 'next/head';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 const Home: NextPage = () => {
   const {data: session, status} = useSession()
+  const [disable, setDisable] = useState(false)
   useEffect(() => {
     document.documentElement.setAttribute(
         "data-color-scheme", "dark"
@@ -49,12 +50,15 @@ const Home: NextPage = () => {
               </div>
               <Link href="/event/lesson/first-lesson">
                 <button
+                  disabled={disable}
+                  onClick={() => setDisable(true)}
                   className="w-full mt-4 bg-green-600 uppercase py-4 rounded font-bold text-sm hover:bg-green-700 transition-colors">
                       Aulas
                 </button>
               </Link>
               <button
-                onClick={() => signOut()}
+                disabled={disable}
+                onClick={() => {signOut(); setDisable(true)}}
                 className="w-full mt-4 bg-red-600 uppercase py-4 rounded font-bold text-sm hover:bg-red-700 transition-colors">
                     Sair
               </button>
