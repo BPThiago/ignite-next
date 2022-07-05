@@ -1,9 +1,17 @@
 
 import { MoonStars as Moon, Sun } from "phosphor-react"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 export default function ToggleTheme() {
     const [theme, setTheme] = useState("light")
+
+    useEffect(
+        () => {
+            document.documentElement.setAttribute(
+                "data-color-scheme", theme
+            )
+        }, [theme]
+    )
 
     function handleTheme() {
         if (theme == "light") {

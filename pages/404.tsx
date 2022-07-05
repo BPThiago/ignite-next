@@ -1,7 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect } from "react";
 
 export default function Page404() {
+    useEffect(() => {
+        document.documentElement.setAttribute(
+            "data-color-scheme", "dark"
+        )
+    }, []);
     return (
         <div className="bg-gray-700 text-gray-100">
             <div className="mx-auto grid grid-cols-1 md:grid-cols-2 min-h-screen items-center p-4 gap-5 max-w-[1100px]">

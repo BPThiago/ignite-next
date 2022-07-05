@@ -7,9 +7,15 @@ import Link from 'next/link';
 import ReactIcon from '../components/svg/ReactIcon';
 import Footer from '../components/Footer';
 import Head from 'next/head';
+import { useEffect } from 'react';
 
 const Home: NextPage = () => {
   const {data: session, status} = useSession()
+  useEffect(() => {
+    document.documentElement.setAttribute(
+        "data-color-scheme", "dark"
+    )
+  }, []);
   return (
     <>
       <Head>
