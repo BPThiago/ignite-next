@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Page404() {
     return (
@@ -16,7 +17,9 @@ export default function Page404() {
                     <span className="text-green-400">Administrador responde:</span>
                     <p className="">Por mais que você esteja buscando a resposta da vida, do universo e de tudo mais, você foi longe demais...</p>
                     <p className="text-gray-300">Para retornar a um local seguro, clique no botão abaixo.</p>
-                    <button className="bg-purple-700 w-fit px-10 py-3 rounded-md mx-auto hover:bg-purple-600 transition-colors">O Início</button>
+                    <Link href="/">
+                        <button className="bg-purple-700 w-fit px-10 py-3 rounded-md mx-auto hover:bg-purple-600 transition-colors">O Início</button>
+                    </Link>
                 </div>
             </div>
         </div>
