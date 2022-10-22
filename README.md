@@ -57,3 +57,4 @@ Aplicação desenvolvida e remodelada com base na série de aulas do Ignite Lab 
 * [x] Uso do React Player no lugar do Vime JS por melhor compatibilidade com a versão 18.2.0 do React
 * [x] Responsividade
 * [x] Alterar aparência do scroll
+* [x] Página 404
